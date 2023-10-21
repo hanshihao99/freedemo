@@ -1,0 +1,7 @@
+hello word
+hello world
+hello pit
+hello pee
+MD zz
+尼玛是要替换的内容
+铭感词汇如下：NB => nb 不替换
