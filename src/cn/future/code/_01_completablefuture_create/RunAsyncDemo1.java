@@ -15,6 +15,15 @@ public class RunAsyncDemo1 {
         CommonUtils.printThreadLog("main 线程启动");
 
         // CompletableFuture 异步任务开始
+//        CompletableFuture.runAsync(new Runnable() {
+//            @Override
+//            public void run() {
+//                CommonUtils.printThreadLog("读取文件开始");
+//                CommonUtils.sleepMillis(3000);
+//                CommonUtils.printThreadLog("读取文件结束");
+//            }
+//        });
+
         CompletableFuture.runAsync(new Runnable() {
             @Override
             public void run() {
@@ -22,6 +31,8 @@ public class RunAsyncDemo1 {
                 CommonUtils.sleepMillis(3000);
                 CommonUtils.printThreadLog("读取文件结束");
             }
+        }).thenAccept(content ->{
+            System.out.println("content : " + 12);
         });
 
         CommonUtils.printThreadLog("main 继续执行任务");

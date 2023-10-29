@@ -2,6 +2,7 @@ package cn.future.code.thread;
 
 import cn.future.code.utils.CommonUtils;
 
+import javax.print.DocFlavor;
 import java.util.concurrent.CompletableFuture;
 
 /**
@@ -11,15 +12,24 @@ import java.util.concurrent.CompletableFuture;
  */
 public class RunThreadDemo {
 
+    private static int num = 0;
+
     public static void main(String[] args) {
 
+
         CommonUtils.printThreadLog("main启动");
+        for(int i = 0;i<100000;i++){
+            num++;
+        }
         //启动线程
         new Thread(new Runnable() {
             @Override
             public void run() {
+                for(int i = 0;i<100000;i++){
+                    num++;
+                }
                 CommonUtils.printThreadLog("线程启动");
-                CommonUtils.sleepMillis(1000);
+//                CommonUtils.sleepMillis(1000);
                 CommonUtils.printThreadLog("线程结束");
             }
         }).start();
@@ -30,8 +40,11 @@ public class RunThreadDemo {
         CompletableFuture<Void> future = CompletableFuture.runAsync(new Runnable() {
             @Override
             public void run() {
+                for(int i = 0;i<100000;i++){
+                    num++;
+                }
                 CommonUtils.printThreadLog("线程2启动");
-                CommonUtils.sleepMillis(1000);
+//                CommonUtils.sleepMillis(1000);
                 CommonUtils.printThreadLog("线程2结束");
             }
         });
@@ -41,5 +54,7 @@ public class RunThreadDemo {
         future.join();
 
         CommonUtils.printThreadLog("main线程等待异步任务执行完毕后结束");
+
+        System.out.println(num);
     }
 }
