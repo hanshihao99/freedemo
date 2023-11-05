@@ -9,6 +9,6 @@ public class CodeTest2 {
 
     public static void main(String[] args) {
         String str = new String();
-
+        System.out.println("hello word");
     }
 }
