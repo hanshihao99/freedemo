@@ -19,7 +19,7 @@ public class Main {
         System.out.println(
             "vscode test"
         );
-        
+
         Arrays.asList();
 //
 //        List<String> list = new ArrayList<>();
