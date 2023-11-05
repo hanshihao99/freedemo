@@ -13,6 +13,8 @@ public class LinkedListTest {
     public static void main(String[] args) {
 
         LinkedList<Integer> list = new LinkedList<>();
+        int[] arr = {1,2,3,4};
+        int length = arr.length;
 
         list.add(1);
         list.add(2);

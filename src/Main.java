@@ -16,7 +16,11 @@ public class Main {
         String s = "hello";
         System.out.println(s.substring(0,4));
 
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> f2ad6356a338d2f5fc8895348591c21a86c8e3d5
         Arrays.asList();
 //
 //        List<String> list = new ArrayList<>();
