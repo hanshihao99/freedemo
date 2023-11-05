@@ -16,6 +16,7 @@ public class Main {
         String s = "hello";
         System.out.println(s.substring(0,4));
 
+
         Arrays.asList();
 //
 //        List<String> list = new ArrayList<>();
