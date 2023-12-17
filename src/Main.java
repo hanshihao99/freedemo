@@ -26,6 +26,8 @@ public class Main {
         System.out.println("2023_12_17_branch first push");
 
         System.out.println("first merge main test    ");
+
+        System.out.println("push origin");
 //
 //        List<String> list = new ArrayList<>();
 //        list.add("lee");
